@@ -1,142 +1,94 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azat Maukenov - Resume</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        header {
-            text-align: center;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header h2 {
-            margin: 5px 0;
-            font-weight: 400;
-            color: #777;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h3 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-        }
-        .skills span {
-            display: block;
-            margin-top: 5px;
-            font-size: 0.9em;
-            color: #555;
-        }
-        .contact a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
+    <title>Azat Maukenov - Portfolio</title>
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">-->
+    <link rel="stylesheet" href='style.css'>
+    <!--<script src="{{ url_for('static', filename='js/script.js') }}"></script>-->
+    <script src='script.js'></script>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Azat Maukenov</h1>
-            <h2>Student | Aspiring Automation Engineer</h2>
-        </header>
-
-        <section class="section contact">
-            <h3>Contact Information</h3>
+    <div class="hero">
+        <nav>
+            <h1 class="logo">Azat Maukenov</h1>
             <ul>
-                <li><strong>Email:</strong> <a href="mailto:azatmaukenov@gmail.com">azatmaukenov@gmail.com</a></li>
-                <li><strong>Phone:</strong> +77772462911</li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/azat-maukenov-5944bb326/" target="_blank">linkedin.com/in/azat-maukenov</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/Azekadomain" target="_blank">github.com/Azekadomain</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-
-        <section class="section">
-            <h3>Objective</h3>
-            <p>Aspiring to combine expertise in <strong>automation and control systems</strong> with emerging fields such as <strong>artificial intelligence</strong>, <strong>machine learning</strong>, and <strong>mobile robotics</strong> to design innovative solutions in engineering and beyond. Passionate about contributing to groundbreaking projects in <strong>cosmology</strong>, <strong>astroengineering</strong>, or <strong>galactic studies</strong>, leveraging automation to drive technological progress.</p>
-        </section>
-
-        <section class="section">
-            <h3>Education</h3>
-            <ul>
-                <li><strong>Kazakh-British Technical University (KBTU)</strong></li>
-                <li>Bachelor’s Degree in Automation and Control</li>
-                <li>Expected Graduation: 2027</li>
-            </ul>
-        </section>
-
-        <section class="section skills">
-            <h3>Technical Skills</h3>
-            <ul>
-                <li><strong>Programming Languages:</strong> Java, C++, Python, Kotlin</li>
-                <li><strong>Development Tools:</strong> IntelliJ IDEA (Ultimate Edition), Arduino IDE, Gradle</li>
-                <li><strong>Frameworks & Tools:</strong> Familiar with Spring for backend development</li>
-                <li><strong>Expertise Areas:</strong> Algorithms and Data Structures, Autonomy in Mobile Robots (AMR), Digital and Electronic Design</li>
-                <li><strong>Additional Skills:</strong> Video creation and editing for project presentations</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h3>Projects</h3>
-            <ul>
-                <li><strong>Suspicious Transaction Detection:</strong> Solo project focusing on identifying money laundering cycles using algorithms in C++. Processed CSV files with 2M+ rows using Tarjan’s algorithm, significantly reducing the time needed to identify transactional cycles.</li>
-                <li><strong>Virtual Tourism Platform:</strong> Proposed a platform enabling virtual travel experiences for users worldwide.</li>
-                <li><strong>Arduino-Based Robotics:</strong> Designed and implemented functional robotic models using Arduino, exploring schematics and microcontroller functionality.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h3>Extracurricular Interests</h3>
-            <ul>
-                <li>Chess enthusiast and strategic thinker. Playing chess has honed problem-solving skills, enhanced strategic planning, and strengthened decision-making under pressure.</li>
-                <li>Creator of educational content on robotics and automation.</li>
-                <li>Avid listener of podcasts by Elon Musk and others focused on AI, engineering, and future technologies.</li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>References available upon request.</p>
-        </footer>
+        </nav>
+        <div class="hero-content">
+            <h2>Automation Engineer & AI Enthusiast</h2>
+            <p>Combining automation, AI, and robotics to shape the future of engineering.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </div>
+
+    <section id="about" class="section">
+        <h3>About Me</h3>
+        <p>I am an aspiring automation engineer with a strong interest in AI, robotics, and digital design. Passionate about contributing to groundbreaking projects in cosmology, astroengineering, or galactic studies, leveraging automation to drive technological progress.</p>
+    </section>
+
+    <section id="education" class="section">
+        <h3>Education</h3>
+        <p>Kazakh-British Technical University (KBTU)</p>
+        <p>Bachelor’s Degree in Automation and Control</p>
+        <p>Expected Graduation: 2027</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h3>Technical Skills</h3>
+        <ul>
+            <li>Programming Languages: Java, C++, Python, Kotlin</li>
+            <li>Development Tools: IntelliJ IDEA (Ultimate Edition), Arduino IDE, Gradle</li>
+            <li>Frameworks & Tools: Familiar with Spring for backend development</li>
+            <li>Expertise Areas: Algorithms and Data Structures, Autonomy in Mobile Robots (AMR), Digital and Electronic Design</li>
+            <li>Additional Skills: Video creation and editing for project presentations</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section">
+        <h3>Projects</h3>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h4>Suspicious Transaction Detection</h4>
+                <p>Identified money laundering patterns in large datasets using C++ algorithms. Processed CSV files with 2M+ rows using Tarjan’s algorithm, significantly reducing the time needed to identify transactional cycles.</p>
+            </div>
+            <div class="project-card">
+                <h4>Virtual Tourism Platform</h4>
+                <p>Developed a concept for an immersive virtual travel experience.</p>
+            </div>
+            <div class="project-card">
+                <h4>Arduino-Based Robotics</h4>
+                <p>Designed and implemented functional robotic models using Arduino, exploring schematics and microcontroller functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="extracurricular" class="section">
+        <h3>Extracurricular Interests</h3>
+        <ul>
+            <li>Chess enthusiast and strategic thinker. Playing chess has honed problem-solving skills, enhanced strategic planning, and strengthened decision-making under pressure.</li>
+            <li>Creator of educational content on robotics and automation.</li>
+            <li>Avid listener of podcasts by Elon Musk and others focused on AI, engineering, and future technologies.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:azatmaukenov@gmail.com">azatmaukenov@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Azekadomain" target="_blank">github.com/Azekadomain</a></p>
+        <p>Phone: <a>+77772462911</a></p>
+    </section>
 </body>
 </html>
